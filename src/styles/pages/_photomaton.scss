@@ -1,0 +1,17 @@
+.photomaton{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    .buttonMenu{
+        position: fixed;
+        top: 50%;
+        right: 0;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 1%;
+    }
+}

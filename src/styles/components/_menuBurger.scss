@@ -1,0 +1,51 @@
+.menuBurger {
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(91, 54, 54,0.6);
+  font-size: 1.5rem;
+  padding: 3%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 20%;
+
+.selectionsHair{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap : 2%;
+
+    .chooseCut, .chooseColor{
+        height: 40%;
+        width: 100%;
+        background-color: white;
+        border-radius: 10px;
+      }
+}
+
+
+.buttonPhotomaton{
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 90%;
+    cursor: pointer;
+    padding: 5%;
+  }
+  .buttonClose{
+    position: fixed;
+    top: 50%;
+    right: 25%;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 1%;
+  }
+}

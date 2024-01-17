@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { NavLink, useOutletContext } from "react-router-dom";
+import { useOutletContext, useNavigate } from "react-router-dom";
 import colorsHair from "./colorsHair";
 import HairCutF from "./hairCutF";
 
@@ -7,19 +7,19 @@ const MenuBurger = ({ openMenu, setOpenMenu, setChooseCut }) => {
   const [openCut, setOpenCut] = useState(false);
   const [openColor, setOpenColor] = useState(false);
   const [startIndex, setStartIndex] = useState(0);
-
   const [chooseColor, setChooseColor] = useOutletContext();
 
-  const handlePrev = () => {
-    setStartIndex((prevIndex) => Math.max(0, prevIndex - 2));
-  };
+const navigate = useNavigate();
+  //   const handlePrev = () => {
+  //     setStartIndex((prevIndex) => Math.max(0, prevIndex - 2));
+  //   };
 
-  const handleNext = () => {
-    setStartIndex((prevIndex) => {
-      const nextIndex = prevIndex + 2;
-      return nextIndex >= HairCutF.length ? 0 : nextIndex;
-    });
-  };
+  //   const handleNext = () => {
+  //     setStartIndex((prevIndex) => {
+  //       const nextIndex = prevIndex + 2;
+  //       return nextIndex >= HairCutF.length ? 0 : nextIndex;
+  //     });
+  //   };
 
   function handleClose() {
     setOpenMenu(!openMenu);
@@ -57,33 +57,14 @@ const MenuBurger = ({ openMenu, setOpenMenu, setChooseCut }) => {
     setOpenMenu(false);
   }
 
+  function handleNavigate(){
+    navigate("/styliste")
+  }
+
   return (
     <div className="menuBurger">
       <div className="selectionsHair">
-        <button className="buttonPhotomaton" onClick={handleCut}>
-          Coupe
-        </button>
-        {openCut && filteredHaircuts.length > 0 && (
-          <div className="chooseCut">
-            <p
-              className="switch"
-              onClick={startIndex > 0 ? handlePrev : null}
-            >{`<`}</p>
-            {filteredHaircuts.map((cut) => (
-              <img
-                className="cutHair"
-                onClick={() => handleSelectHairCut(cut)}
-                key={cut.id}
-                src={cut.image}
-              />
-            ))}
-            <p
-              className="switch"
-              onClick={startIndex + 2 < HairCutF.length ? handleNext : null}
-            >{`>`}</p>
-          </div>
-        )}
-        <button className="buttonPhotomaton" onClick={handleColor}>
+      <button className="buttonPhotomaton" onClick={handleColor}>
           Couleur
         </button>
         {openColor ? (
@@ -102,10 +83,39 @@ const MenuBurger = ({ openMenu, setOpenMenu, setChooseCut }) => {
         ) : (
           ""
         )}
+        <button className="buttonPhotomaton" onClick={handleCut}>
+          Coupe
+        </button>
+        
+       
+        {/* {openCut && filteredHaircuts.length > 0 && ( */}
+        {openCut && (
+          <div className="chooseCut">
+            {/* <p
+              className="switch"
+              onClick={startIndex > 0 ? handlePrev : null}
+            >{`<`}</p> */}
+            {/* {filteredHaircuts.map((cut) => ( */}
+            {HairCutF
+            .filter((cutFiltered)=>(chooseColor=== cutFiltered.color))
+            .map((cut) => (
+              <img
+                className="cutHair"
+                onClick={() => handleSelectHairCut(cut)}
+                key={cut.id}
+                src={cut.image}
+              />
+            ))}
+            {/* <p
+              className="switch"
+              onClick={startIndex + 2 < HairCutF.length ? handleNext : null}
+            >{`>`}</p> */}
+          </div>
+        )}
+        
       </div>
-      <NavLink className="buttonPhotomaton" to="/styliste">
-        <button >Valider</button>
-      </NavLink>
+        <button className="buttonPhotomaton" onClick={handleNavigate}>Valider</button>
+
       <button className="buttonClose" onClick={handleClose}>{`<`}</button>
     </div>
   );

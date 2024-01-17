@@ -25,7 +25,7 @@
 
     .chooseCut,
     .chooseColor {
-      height: 40%;
+      min-height: 40%;
       width: 100%;
       background-color: white;
       border-radius: 10px;
@@ -58,6 +58,7 @@
     width: 90%;
     cursor: pointer;
     padding: 5%;
+
   }
   .buttonClose {
     position: fixed;
@@ -68,6 +69,8 @@
     border: none;
     border-radius: 10%;
     padding: 1%;
+
+  
   }
 }
 

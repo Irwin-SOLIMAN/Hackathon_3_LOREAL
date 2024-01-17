@@ -13,8 +13,10 @@ const Photomaton = () => {
 
   return (
     <div className="photomaton">
-      <img className="photoUser" src={photo} alt="photo-capturer" />
-      {chooseCut && <img className={chooseCut.className} src={chooseCut.image} /> }
+      {photo && <img className="photoUser" src={photo} alt="photo-capturer" />}
+      {chooseCut && (
+        <img className={chooseCut.className} src={chooseCut.image} />
+      )}
       {openMenu === false ? (
         <button className="buttonMenu" onClick={handleMenu}>{`<`}</button>
       ) : (

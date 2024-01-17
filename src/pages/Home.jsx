@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Modal from "react-modal";
 import Camera from "../components/Camera";
 
@@ -28,6 +28,7 @@ const Home = () => {
           onRequestClose={() => setIsCameraOpen(false)}
           className={"modal"}
         >
+          <div className="cercle"></div>
           <Camera />
         </Modal>
       </div>

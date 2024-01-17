@@ -20,21 +20,39 @@ function Camera() {
   }, [webcamRef]);
 
   return (
-    <>
+    <div style={{ position: "relative", width: 500, height: 720 }}>
       <Webcam
         audio={false}
-        height={720}
+        height={"100%"}
         ref={webcamRef}
         screenshotFormat="image/jpeg"
-        width={1280}
+        width={"100%"}
         videoConstraints={videoConstraints}
       />
-      <button onClick={capture}>Capture photo</button>
-
+      <button
+        onClick={capture}
+        style={{
+          position: "absolute",
+          bottom: 150,
+          left: "50%",
+          transform: "translateX(-70%)",
+          zIndex: 100,
+          backgroundColor: "black",
+          borderRadius: 10,
+          width: 150,
+          height: 40,
+          fontWeight: "bold",
+          fontFamily: "TradeGothicLTStdBold",
+          fontSize: 17,
+          color: "white",
+        }}
+      >
+        Prend ta photo
+      </button>
       <div>
-        <img src={photo} alt="" />
+        <img src={photo} alt="photo-capturer"/>
       </div>
-    </>
+    </div>
   );
 }
 

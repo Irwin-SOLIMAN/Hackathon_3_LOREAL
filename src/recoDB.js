@@ -10,7 +10,7 @@ const reco = [
         id: 2,
         name : "Excellence Crème Blondes",
         price: "11.70€",
-        categ: "blod",
+        categ: "blond",
         img: "public/images/teinture_blond2.png",
     },
     {
@@ -24,21 +24,21 @@ const reco = [
         id: 4,
         name : "Préférence Châtains",
         price: "11.90€",
-        categ: "chatain",
+        categ: "DarkBlond",
         img: "public/images/teinture_chatain1.png",
     },
     {
         id: 5,
         name : "Excellence Crème Châtain",
         price: "11.70€",
-        categ: "chatain",
+        categ: "DarkBlond",
         img: "public/images/teinture_chatain2.png",
     },
     {
         id: 6,
         name : "Casting Crème Gloss Châtain",
         price: "10.90€",
-        categ: "chatain",
+        categ: "DarkBlond",
         img: "public/images/teinture_chatain3.png",
     },
     {

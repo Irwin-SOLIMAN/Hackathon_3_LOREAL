@@ -5,47 +5,70 @@
   justify-content: center;
   align-items: center;
 
-  h1 {
-    margin-top: 3%;
-    font-family: "TradeGothicLTStdBold";
-    font-size: 1rem;
-  }
 
-  h2 {
-    font-family: "TradeGothicLTStdBold";
-    font-size: 1rem;
-  }
+  .photo-accueil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  img {
-    margin: 10% 0 0 0;
-    width: 350px;
-    height: 200px;
-  }
-  
+    h1 {
+      margin-top: 3%;
+      font-family: "TradeGothicLTStdBold";
+      font-size: 1rem;
+    }
+    h2 {
+      font-family: "TradeGothicLTStdBold";
+      font-size: 1rem;
+    }
+    img {
+      margin: 10% 0 0 0;
+      width: 350px;
+      height: 200px;
+    }
+    button {
+      margin-top: 10%;
+      width: 200px;
+      height: 100px;
+      border-radius: 10px;
+      border: none;
+      background-color: #080808;
+      font-family: "TradeGothicLTStdBold";
+      font-size: 0.8rem;
+      color: #f4eded;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      &:active {
+        transform: scale(0.95);
+        background-color: #666666;
+      }
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  } 
 }
-
-
 
 .modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vh;
-  height: 100vh;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #080808c0;
-  backdrop-filter: blur(2px);
-}
-
-.cercle {
-  width: 170px;
-  height: 170px;
-  border: 2px solid black;
-  border-radius: 100px;
-  z-index: 100;
-  position: absolute;
-  margin-right: 80px;
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vh;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #080808c0;
+    backdrop-filter: blur(2px);
+    .cercle {
+      width: 170px;
+      height: 170px;
+      border: 2px solid black;
+      border-radius: 100px;
+      z-index: 200;
+      position: absolute;
+      margin-right: 80px;
+    }
+  }

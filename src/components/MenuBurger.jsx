@@ -1,11 +1,12 @@
 import { useState } from "react";
+import colorsHair from "./colorsHair";
 
 const MenuBurger = ({ openMenu, setOpenMenu }) => {
  
   const [openCut, setOpenCut] = useState(false);
   const [openColor, setOpenColor] = useState(false);
 
-  function handleClose() {
+    function handleClose() {
     setOpenMenu(!openMenu);
   }
 

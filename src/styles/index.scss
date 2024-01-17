@@ -1,7 +1,13 @@
 @import "settings";
 
 @import "./components/header";
+@import "./pages/home";
 
 //import des styles de pages ici
+@import "./pages/photomaton";
+
 
 @import "./pages/login"; //import des styles de composants ici
+//import des styles de composants ici
+@import "./components/header";
+@import "./components/menuBurger";

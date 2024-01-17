@@ -37,9 +37,9 @@ const Styliste = () => {
                 </input>
                 {stylistMap && 
                     <div className='map'>
-                        <div className='closingDiv'>
+                        <div className='closingDiv' onClick={handleClose}>
                             <p>Fermer la carte</p>
-                            <div className='closingButton' onClick={handleClose}>✖️</div>
+                            <div className='closingButton'>✖️</div>
                         </div>
                         <img src='public/images/maps1.png'/>
                     </div>

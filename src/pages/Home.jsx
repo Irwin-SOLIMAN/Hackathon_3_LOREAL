@@ -1,6 +1,11 @@
+import Camera from "../components/Camera";
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <div>
+      <Camera />
+    </div>
+  );
 };
 
 export default Home;

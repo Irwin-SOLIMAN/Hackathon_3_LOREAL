@@ -13,7 +13,13 @@ body,
   min-height: 100vh;
   overflow-x: hidden;
   overflow-y: scroll;
+  font-family: "TradeGothicLTStdBold", sans-serif;
 }
+@font-face{
+  font-family: "TradeGothicLTStdBold";
+  src: url("../font/TradeGothicLTStdBold.otf") format('opentype');
+}
+
 
 :root {
   // --primary-color-text: black;

@@ -1,40 +1,12 @@
-import React from "react";
-import { useState } from "react";
-import Webcam from "react-webcam";
-
-const videoConstraints = {
-  width: 1280,
-  height: 720,
-  facingMode: "user",
-};
+import { Outlet } from "react-router-dom";
+import Header from "./components/Header";
 
 function App() {
-  const [photo, setphoto] = useState();
-
-  const webcamRef = React.useRef(null);
-
-  const capture = React.useCallback(() => {
-    const imageSrc = webcamRef.current.getScreenshot();
-    console.log(imageSrc);
-    setphoto(imageSrc);
-  }, [webcamRef]);
-
   return (
-    <>
-      <Webcam
-        audio={false}
-        height={720}
-        ref={webcamRef}
-        screenshotFormat="image/jpeg"
-        width={1280}
-        videoConstraints={videoConstraints}
-      />
-      <button onClick={capture}>Capture photo</button>
-
-      <div>
-        <img src={photo} alt="" />
-      </div>
-    </>
+    <div className="app">
+      <Header />
+      <Outlet />
+    </div>
   );
 }
 

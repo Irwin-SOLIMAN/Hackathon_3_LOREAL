@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 150ms;
+}
+
+html,
+body,
+:root {
+  background-color: #f7ece8;
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+:root {
+  // --primary-color-text: black;
+  // --secondary-color-text: white;
+  // --primary-color: #d56c06;
+  // --title-font-size: 20px;
+  // --text-second-font-size: 12px;
+  // --font-family: "poppins";
+}

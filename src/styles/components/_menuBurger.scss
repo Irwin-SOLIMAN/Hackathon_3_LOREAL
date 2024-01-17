@@ -1,0 +1,72 @@
+.menuBurger {
+  width: 30vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(91, 54, 54, 0.6);
+  font-size: 1.5rem;
+  padding: 3%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding-top: 10%;
+  animation: slideIn;
+  animation-duration: 2sec;
+  transition: all ease;
+
+  .selectionsHair {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 2%;
+
+    .chooseCut,
+    .chooseColor {
+      height: 40%;
+      width: 100%;
+      background-color: white;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      .switch {
+        transform: rotate(90deg);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .buttonPhotomaton {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 90%;
+    cursor: pointer;
+    padding: 5%;
+  }
+  .buttonClose {
+    position: fixed;
+    top: 50%;
+    right: 30%;
+    background-color: rgb(91, 54, 54);
+    color: white;
+    border: none;
+    border-radius: 10%;
+    padding: 1%;
+  }
+}
+
+@keyframes slideIn {
+    0% {
+      transform: translate(0);
+    }
+    100% {
+      transform: translate(100%);
+    }
+  }

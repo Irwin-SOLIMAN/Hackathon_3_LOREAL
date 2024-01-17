@@ -35,7 +35,10 @@ const MenuBurger = ({ openMenu, setOpenMenu }) => {
         <button className="buttonPhotomaton" onClick={handleColor}>
           Couleur
         </button>
-        {openColor ? <div className="chooseColor"><p className="switch">{`<`}</p>blabla couleur<p className="switch">{`>`}</p></div> : ""}
+        {openColor ? <div className="chooseColor">
+            <p className="switch">{`<`}</p>
+           {/* {colorsHair.map((color,index)=>{return()})} */}
+            <p className="switch">{`>`}</p></div> : ""}
       </div>
       <button className="buttonPhotomaton">Valider</button>
       <button className="buttonClose" onClick={handleClose}>{`<`}</button>

@@ -31,12 +31,21 @@
       border-radius: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-around;
 
       .switch {
         transform: rotate(90deg);
         cursor: pointer;
+      }
+
+      .colorHair {
+        width: 50%;
+        border-radius: 50%;
+      }
+
+      .cutHair{
+        width: 60%;
       }
     }
   }
@@ -63,10 +72,10 @@
 }
 
 @keyframes slideIn {
-    0% {
-      transform: translate(0);
-    }
-    100% {
-      transform: translate(100%);
-    }
+  0% {
+    transform: translate(0);
   }
+  100% {
+    transform: translate(100%);
+  }
+}

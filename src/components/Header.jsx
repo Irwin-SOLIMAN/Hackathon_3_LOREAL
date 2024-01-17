@@ -1,11 +1,8 @@
-import React from 'react';
 
 const Header = () => {
-    return (
-        <div>
-            
-        </div>
-    );
+  return <div className="header">
+<img src="/images/Loreal_logo1.png" alt="logo L'Oréal" />
+  </div>;
 };
 
 export default Header;

@@ -50,7 +50,7 @@ function Camera() {
         Prend ta photo
       </button>
       <div>
-        <img src={photo} alt="" />
+        <img src={photo} alt="photo-capturer"/>
       </div>
     </div>
   );

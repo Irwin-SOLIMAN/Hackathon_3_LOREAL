@@ -28,6 +28,7 @@ const Home = () => {
           onRequestClose={() => setIsCameraOpen(false)}
           className={"modal"}
         >
+          <div className="cercle"></div>
           <Camera />
         </Modal>
       </div>

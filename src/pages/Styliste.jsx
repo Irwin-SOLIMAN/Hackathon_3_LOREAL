@@ -1,9 +1,17 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useOutletContext } from 'react-router-dom';
 import reco from '../recoDB';
+
 
 const Styliste = () => {
 
+    const [chooseColor, setChooseColor] = useOutletContext();
+
     const [stylistMap, setStylistMap] = useState(false);
+
+    useEffect(() => {
+        console.log(chooseColor);
+    }, [])
 
     const handleInputChange = (event) => {
         const cityValue = event.target.value.toLowerCase();
@@ -16,6 +24,8 @@ const Styliste = () => {
     const handleClose = () => {
         setStylistMap(false);
     }
+
+    const recoFilteredByColor = reco.filter(product => product.categ === chooseColor || product.categ === "soin");
 
     return (
         <div className='styliste'>
@@ -40,7 +50,7 @@ const Styliste = () => {
                     Je consulte les produits recommandés
                 </p>
                 <div className='productsMap'>
-                    {reco.map((product) => {
+                    {recoFilteredByColor.map((product) => {
                         return (
                             <div className='productCard' key={product.id}>
                                 <div className='imgContainer'>

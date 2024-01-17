@@ -151,6 +151,8 @@
             display: flex;
             position: absolute;
             bottom: 0;
-        }
+        } &:hover{
+            cursor: pointer;
+         }
     }
 }

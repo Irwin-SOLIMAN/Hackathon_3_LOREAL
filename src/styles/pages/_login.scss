@@ -1,0 +1,108 @@
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .leftLine {
+      border: solid 1px black;
+      width: 30vw;
+      height: 1px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      width: 60px;
+      height: 60px;
+      img {
+        width: 100%;
+        contain: cover;
+      }
+    }
+    .rightLine {
+      border: solid 1px black;
+      width: 30vw;
+      height: 1px;
+    }
+  }
+
+  .loginArea {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    .title {
+      padding-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: left;
+
+      input {
+        border: none;
+        box-shadow: 4px 4px 20px 0px #dddada;
+        border-radius: 5px;
+        width: 80%;
+        height: 25px;
+        color: black;
+      }
+      input::placeholder {
+        color: black;
+      }
+      button {
+        border: none;
+        align-self: flex-end;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+      }
+    }
+  }
+
+  .registerArea {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+
+    .registerText {
+      padding: 20px 0 20px 0;
+
+      width: 80vw;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: left;
+
+      input {
+        box-shadow: 4px 4px 20px 0px #dddada;
+        border: none;
+        border-radius: 5px;
+        width: 80%;
+        height: 25px;
+        color: black;
+      }
+      input::placeholder {
+        color: black;
+      }
+      button {
+        border: none;
+        align-self: flex-end;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        border-radius: 20px;
+      }
+    }
+  }
+}

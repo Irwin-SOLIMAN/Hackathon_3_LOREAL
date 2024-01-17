@@ -53,8 +53,6 @@ const navigate = useNavigate();
   function handleSelectHairCut(chooseCut) {
     setChooseCut(chooseCut);
     setOpenColor(false);
-    setOpenCut(false);
-    setOpenMenu(false);
   }
 
   function handleNavigate(){

@@ -3,7 +3,7 @@ import { useOutletContext } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 const Photomaton = () => {
-  const [photo, setphoto] = useOutletContext();
+  const [photo, setPhoto] = useOutletContext();
   const [openMenu, setOpenMenu] = useState(false);
   const [chooseCut, setChooseCut] = useState("");
   const [photoSave, setPhotoSave] = useState("");
@@ -15,8 +15,6 @@ const Photomaton = () => {
   function handleMenu() {
     setOpenMenu(true);
   }
-
-  console.log(photo);
 
   return (
     <div className="photomaton">

@@ -22,38 +22,51 @@
         color: white;
         border: none;
         border-radius: 10%;
-        padding: 1%;
+        padding: 4%;
+        z-index: 5;
     }
 
     //positions des haircuts
 
     .hairF1{
         position: absolute;
-        width: 100%;
+        width: 130%;
         z-index: 1;
+        left: -18%;
+        top: 6%;
     }
     .hairF2{
         position: absolute;
-        width: 100%;
+        width: 190%;
         z-index: 1;
+        left: -45%;
+        top: 8%;
     }
     .hairF3{
         position: absolute;
-        width: 100%;
+        width: 170%;
+        left: -40%;
+        top: 8%;
         z-index: 1;
     }
     .hairF4{
         position: absolute;
         width: 100%;
+        left: 2%;
+        top: 12%;
         z-index: 1;
     }
     .hairF5{
         position: absolute;
-        width: 100%;
+        width: 175%;
+        left: -41%;
+        top: -2%;
     }
     .hairF6{
         position: absolute;
-        width: 100%;
+        width: 120%;
+        left: -12%;
+        top: 10%;
         z-index: 1;
     }
    

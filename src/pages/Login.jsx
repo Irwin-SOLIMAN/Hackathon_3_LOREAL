@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 // import { FaUser } from "react-icons/fa";
 useState;
@@ -45,7 +46,11 @@ const Login = () => {
               alt="password visible"
             />
           </div>
-          <button type="submit">Connexion</button>
+          <button type="submit">
+            <NavLink to={"/rdv"}>
+              Connexion
+            </NavLink>
+          </button>
         </form>
       </div>
 
@@ -75,7 +80,11 @@ const Login = () => {
             />
             <input type="email" name="email" placeholder="✉️ E-mail" />
             <input type="text" name="adresse" placeholder="🏠 Adresse" />
-            <button type="submit">Créer mon compte</button>
+            <button type="submit">
+              <NavLink to={"/rdv"}>
+                Créer mon compte
+              </NavLink>
+            </button>
           </form>
         )}
       </div>

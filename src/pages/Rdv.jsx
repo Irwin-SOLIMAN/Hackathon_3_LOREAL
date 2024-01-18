@@ -47,7 +47,7 @@ function RdvDate() {
           ))}
         </select>
       </div>
-      <button onClick={() => setModalIsOpen(true)} className="button-rdv">
+      <button onClick={() => setModalIsOpen(true)} className="button-rdv-fin">
         Valider le RDV
       </button>
       <Modal

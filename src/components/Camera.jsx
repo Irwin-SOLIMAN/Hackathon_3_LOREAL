@@ -19,15 +19,15 @@ function Camera() {
     const imageSrc = webcamRef.current.getScreenshot();
     setphoto(imageSrc);
     navigate("/photomaton");
-  }, [webcamRef]);
+  }, [navigate, setphoto]);
 
   return (
     <div
       style={{
         position: "relative",
-        width: 300,
+        width: 365,
         // height: ,
-        transform: "translate(-175px, -25px)",
+        // transform: "translate(40px, 40px)",
       }}
     >
       <Webcam

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import React from "react";
 import Webcam from "react-webcam";
@@ -11,15 +10,16 @@ const videoConstraints = {
 
 function Camera() {
   const navigate = useNavigate();
-  const [photo, setphoto] = useOutletContext();
+
+  const { setPhoto } = useOutletContext();
 
   const webcamRef = React.useRef(null);
 
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
-    setphoto(imageSrc);
+    setPhoto(imageSrc);
     navigate("/photomaton");
-  }, [navigate, setphoto]);
+  }, [navigate, setPhoto]);
 
   return (
     <div

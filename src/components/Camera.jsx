@@ -12,6 +12,7 @@ const videoConstraints = {
 function Camera() {
 
   const navigate= useNavigate()
+  // eslint-disable-next-line no-unused-vars
   const[photo, setphoto] = useOutletContext();
 
   const webcamRef = React.useRef(null);
@@ -20,7 +21,7 @@ function Camera() {
     const imageSrc = webcamRef.current.getScreenshot();
     setphoto(imageSrc);
     navigate("/photomaton");
-  }, [webcamRef]);
+  }, [navigate, setphoto]);
 
   return (
     <div style={{ position: "relative", width: 500, height: 720 }}>
@@ -37,8 +38,8 @@ function Camera() {
         onClick={capture}
         style={{
           position: "absolute",
-          bottom: 150,
-          left: "50%",
+          bottom: 100,
+          left: "45%",
           transform: "translateX(-70%)",
           zIndex: 100,
           backgroundColor: "black",

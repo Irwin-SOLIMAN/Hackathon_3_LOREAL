@@ -1,7 +1,17 @@
+.backBTN {
+  position: fixed;
+  top: 20px;
+  left: 5px;
+  z-index: 3;
+}
+
 .photomaton {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  padding-top: 20px;
+
   .buttonMenu {
     position: fixed;
     left: 47%;
@@ -26,14 +36,25 @@
     padding: 2%;
   }
 
+  .valider {
+    z-index: 3;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    color: white;
+    background-color: rgb(64, 121, 64);
+  }
+
   .photoArea {
     display: flex;
     flex-direction: column;
     width: 100vw;
+    height: 90vh;
     overflow-y: hidden;
     position: relative;
 
     .photoUser {
+      height: 90vh;
       width: 100%;
     }
 

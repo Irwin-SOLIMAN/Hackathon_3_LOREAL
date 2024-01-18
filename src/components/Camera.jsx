@@ -11,13 +11,14 @@ const videoConstraints = {
 function Camera() {
   const navigate = useNavigate();
 
-  const { setPhoto } = useOutletContext();
+  const { setPhoto, setBackToCamera } = useOutletContext();
 
   const webcamRef = React.useRef(null);
 
   const capture = React.useCallback(() => {
     const imageSrc = webcamRef.current.getScreenshot();
     setPhoto(imageSrc);
+    setBackToCamera(true);
     navigate("/photomaton");
   }, [navigate, setPhoto]);
 
@@ -26,8 +27,6 @@ function Camera() {
       style={{
         position: "relative",
         width: 365,
-        // height: ,
-        // transform: "translate(40px, 40px)",
       }}
     >
       <Webcam

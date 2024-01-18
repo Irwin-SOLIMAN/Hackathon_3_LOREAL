@@ -1,0 +1,141 @@
+const HairCutF =[{
+    id: 1,
+    className: 'hairF1',
+    image: "/images/hairCutF/hairF1.png",
+    color:"DarkBlond",
+},
+{
+    id: 2,
+    className: 'hairF2',
+    image: "/images/hairCutF/hairF2.png",
+    color:"DarkBlond",
+},
+{
+    id:3,
+    className: 'hairF3',
+    image: "/images/hairCutF/hairF3.png",
+    color:"DarkBlond",
+},
+{
+    id: 4,
+    className: 'hairF4',
+    image: "/images/hairCutF/hairF4.png",
+    color:"blond",
+},
+{
+    id: 5,
+    className: 'hairF5',
+    image: "/images/hairCutF/hairF5.png",
+    color:"brown",
+},
+{
+    id: 6,
+    className: 'hairF6',
+    image: "/images/hairCutF/hairF6-DarkBlond.png",
+    color:"DarkBlond",
+},
+{
+    id: 7,
+    className: 'hairF1',
+    image: "/images/hairCutF/hairF1-blond.png",
+    color:"blond",
+},
+{
+    id: 8,
+    className: 'hairF1',
+    image: "/images/hairCutF/hairF1-brown.png",
+    color:"brown",
+},
+{
+    id: 9,
+    className: 'hairF1',
+    image: "/images/hairCutF/hairF1-red.png",
+    color:"red",
+},
+{
+    id: 10,
+    className: 'hairF2',
+    image: "/images/hairCutF/hairF2-blond.png",
+    color:"blond",
+},
+{
+    id: 11,
+    className: 'hairF2',
+    image: "/images/hairCutF/hairF2-brown.png",
+    color:"brown",
+},
+{
+    id: 12,
+    className: 'hairF2',
+    image: "/images/hairCutF/hairF2-red.png",
+    color:"red",
+},
+{
+    id: 13,
+    className: 'hairF3',
+    image: "/images/hairCutF/hairF3-blond.png",
+    color:"blond",
+},
+{
+    id: 14,
+    className: 'hairF3',
+    image: "/images/hairCutF/hairF3-red.png",
+    color:"red",
+},
+{
+    id: 15,
+    className: 'hairF4',
+    image: "/images/hairCutF/hairF4-brown.png",
+    color:"brown",
+},
+{
+    id: 16,
+    className: 'hairF4',
+    image: "/images/hairCutF/hairF4-DarkBlond.png",
+    color:"DarkBlond",
+},
+{
+    id: 17,
+    className: 'hairF4',
+    image: "/images/hairCutF/hairF4-Red.png",
+    color:"red",
+},
+{
+    id: 18,
+    className: 'hairF5',
+    image: "/images/hairCutF/hairF5-blond.png",
+    color:"blond",
+},
+{
+    id: 19,
+    className: 'hairF5',
+    image: "/images/hairCutF/hairF5-darkBlond.png",
+    color:"DarkBlond",
+},
+{
+    id: 20,
+    className: 'hairF5',
+    image: "/images/hairCutF/hairF5-red.png",
+    color:"red",
+},
+{
+    id: 21,
+    className: 'hairF6',
+    image: "/images/hairCutF/hairF6-Blond.png",
+    color:"blond",
+},
+{
+    id: 22,
+    className: 'hairF6',
+    image: "/images/hairCutF/hairF6-brown.png",
+    color:"brown",
+},
+{
+    id: 23,
+    className: 'hairF6',
+    image: "/images/hairCutF/hairF6-red.png",
+    color:"red",
+}
+]
+
+export default HairCutF;

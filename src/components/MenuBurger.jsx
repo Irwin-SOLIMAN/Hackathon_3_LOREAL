@@ -9,17 +9,6 @@ const MenuBurger = ({ openMenu, setOpenMenu, setChooseCut }) => {
   const [startIndex, setStartIndex] = useState(0);
   const { chooseColor, setChooseColor, validation } = useOutletContext();
 
-  //   const handlePrev = () => {
-  //     setStartIndex((prevIndex) => Math.max(0, prevIndex - 2));
-  //   };
-
-  //   const handleNext = () => {
-  //     setStartIndex((prevIndex) => {
-  //       const nextIndex = prevIndex + 2;
-  //       return nextIndex >= HairCutF.length ? 0 : nextIndex;
-  //     });
-  //   };
-
   function handleClose() {
     setOpenMenu(!openMenu);
   }
@@ -44,10 +33,6 @@ const MenuBurger = ({ openMenu, setOpenMenu, setChooseCut }) => {
     setOpenColor(!openColor);
     setOpenCut(true);
   }
-
-  const filteredHaircuts = HairCutF.filter(
-    (cutFiltered) => chooseColor === "" || chooseColor === cutFiltered.color
-  ).slice(startIndex, startIndex + 2);
 
   function handleSelectHairCut(chooseCut) {
     setChooseCut(chooseCut);
@@ -82,14 +67,8 @@ const MenuBurger = ({ openMenu, setOpenMenu, setChooseCut }) => {
               Coupe
             </button>
 
-            {/* {openCut && filteredHaircuts.length > 0 && ( */}
             {openCut && (
               <div className="chooseCut">
-                {/* <p
-              className="switch"
-              onClick={startIndex > 0 ? handlePrev : null}
-            >{`<`}</p> */}
-                {/* {filteredHaircuts.map((cut) => ( */}
                 {HairCutF.filter(
                   (cutFiltered) => chooseColor === cutFiltered.color
                 ).map((cut) => (
@@ -100,10 +79,6 @@ const MenuBurger = ({ openMenu, setOpenMenu, setChooseCut }) => {
                     src={cut.image}
                   />
                 ))}
-                {/* <p
-              className="switch"
-              onClick={startIndex + 2 < HairCutF.length ? handleNext : null}
-            >{`>`}</p> */}
               </div>
             )}
           </div>

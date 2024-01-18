@@ -27,6 +27,15 @@
     }
   }
 
+  .imageContainer {
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 150px;
+    }
+  }
+
   .finderBlock {
     display: flex;
     flex-direction: column;
@@ -62,10 +71,10 @@
         border-radius: 10px;
         padding: 10px;
         font-family: "TradeGothicLTStdBold", sans-serif;
-        .infos{
-        display: flex;
-        flex-direction: column;
-          a{
+        .infos {
+          display: flex;
+          flex-direction: column;
+          a {
             display: flex;
             width: 100%;
             justify-content: center;
@@ -81,16 +90,15 @@
             }
           }
         }
-        .closingButton{
+        .closingButton {
           display: flex;
           width: 100%;
           justify-content: end;
-          button{
+          button {
             border: none;
             background: none;
           }
         }
-        
       }
       .stylistCard2 {
         position: absolute;
@@ -98,34 +106,34 @@
         border-radius: 10px;
         font-family: "TradeGothicLTStdBold", sans-serif;
         padding: 10px;
-        .closingButton{
+        .closingButton {
           display: flex;
           width: 100%;
           justify-content: end;
-          button{
+          button {
             border: none;
             background: none;
           }
         }
-        .infos{
+        .infos {
           display: flex;
           flex-direction: column;
-            a{
-              display: flex;
-              width: 100%;
-              justify-content: center;
-              .button-rdv {
-                width: 100px;
-                height: 30px;
-                margin-top: 10px;
-                border: solid 1px black;
-                border-radius: 4px;
-                background-color: #fefefe;
-                font-family: "TradeGothicLTStdBold", sans-serif;
-                font-size: 15px;
-              }
+          a {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            .button-rdv {
+              width: 100px;
+              height: 30px;
+              margin-top: 10px;
+              border: solid 1px black;
+              border-radius: 4px;
+              background-color: #fefefe;
+              font-family: "TradeGothicLTStdBold", sans-serif;
+              font-size: 15px;
             }
           }
+        }
       }
       .pin2 {
         position: absolute;
@@ -158,10 +166,10 @@
     height: 70vh;
     margin-top: 20px;
     gap: 10px;
-    .productsMap {border-radius: 8px;
+    .productsMap {
+      border-radius: 8px;
       background: rgb(245, 227, 227);
-      box-shadow: inset 5px 5px 20px #e2e1e1,
-                  inset -10px -10px 20px #fff4ef;
+      box-shadow: inset 5px 5px 20px #e2e1e1, inset -10px -10px 20px #fff4ef;
       padding-top: 10px;
       display: flex;
       flex-wrap: wrap;

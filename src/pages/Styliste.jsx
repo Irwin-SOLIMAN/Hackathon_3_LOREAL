@@ -36,7 +36,6 @@ const Styliste = () => {
     if (setStylist2 === true) {
       setStylist2(false);
     }
-    console.log("styliste1");
   };
   const handleStylist2 = () => {
     setStylist2(true);
@@ -67,12 +66,10 @@ const Styliste = () => {
         </NavLink>
       </div>
       <div>
-        <img
-          width={150}
-          style={{ marginTop: 20 }}
-          src={screenshot}
-          alt={"Screenshot"}
-        />
+        <div className="imageContainer">
+          {" "}
+          <img src={screenshot} alt={"Screenshot"} />
+        </div>
 
         <div className="finderBlock">
           <p>Je trouve un styliste L'ORÉAL</p>

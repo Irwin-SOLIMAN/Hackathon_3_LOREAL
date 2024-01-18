@@ -1,40 +1,64 @@
+.backBTN {
+  position: fixed;
+  top: 20px;
+  left: 5px;
+  z-index: 3;
+}
+
 .photomaton {
-  //   display: flex;
-  //   flex-direction: column;
-  //   width: 100vw;
-  //   height: 92vh;
-  //   overflow-y: hidden;
-  //   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  padding-top: 20px;
 
   .buttonMenu {
     position: fixed;
-    top: 50%;
-    right: 0;
+    left: 47%;
+    bottom: -1%;
     background-color: rgb(91, 54, 54);
     color: white;
     border: none;
     border-radius: 10%;
     padding: 4%;
     z-index: 5;
+    transform: rotate(90deg);
+    cursor: pointer;
+  }
+
+  .buttonPhotomaton {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    width: 30%;
+    cursor: pointer;
+    padding: 2%;
+  }
+
+  .valider {
+    z-index: 3;
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    color: white;
+    background-color: rgb(64, 121, 64);
   }
 
   .photoArea {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    // height: 92vh;
+    height: 90vh;
     overflow-y: hidden;
     position: relative;
 
     .photoUser {
+      height: 90vh;
       width: 100%;
     }
-    // .haircut {
-    //   position: absolute;
-    //   left: -15%;
-    //   top: 20%;
-    // }
 
+    //positions des haircuts
     .hairF1 {
       position: absolute;
       width: 130%;
@@ -77,6 +101,4 @@
       z-index: 1;
     }
   }
-
-  //positions des haircuts
 }

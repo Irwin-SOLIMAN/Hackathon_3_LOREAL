@@ -1,10 +1,12 @@
 import MenuBurger from "../components/MenuBurger";
 import { useOutletContext, useNavigate } from "react-router-dom";
+import Camera from "../components/Camera";
 
 import { useEffect, useState, useRef } from "react";
 
 const Photomaton = () => {
-  const { photo, setScreenshot } = useOutletContext();
+  const { photo, setScreenshot, backToCamera, setBackToCamera } =
+    useOutletContext();
 
   const [openMenu, setOpenMenu] = useState(true);
   const [chooseCut, setChooseCut] = useState("");
@@ -14,7 +16,9 @@ const Photomaton = () => {
 
   useEffect(() => {
     setPhotoSave(photo);
-  }, []);
+    setOpenMenu(true);
+    setChooseCut("");
+  }, [backToCamera]);
 
   function handleMenu() {
     setOpenMenu(true);
@@ -39,42 +43,49 @@ const Photomaton = () => {
 
   return (
     <>
-      <div>Back</div>
+      {!backToCamera ? (
+        <Camera />
+      ) : (
+        <>
+          <div
+            className="backBTN"
+            onClick={() => setBackToCamera(!backToCamera)}
+          >
+            {" "}
+            {`< Caméra`}{" "}
+          </div>
 
-      <div className="photomaton">
-        <div className="photoArea" ref={ref}>
-          {photo && (
-            <img className="photoUser" src={photoSave} alt="photo-capturer" />
-          )}
-          {chooseCut && (
-            <img className={chooseCut.className} src={chooseCut.image} />
-          )}
-        </div>
-        {openMenu === false ? (
-          <button className="buttonMenu" onClick={handleMenu}>{`<`}</button>
-        ) : (
-          <MenuBurger
-            setChooseCut={setChooseCut}
-            openMenu={openMenu}
-            setOpenMenu={setOpenMenu}
-          />
-        )}
-      </div>
-      <button className="buttonPhotomaton" onClick={handleNavigate}>
-        Valider
-      </button>
-      <div>
-        {/* <div>
-          <button style={{ marginBottom: "10px" }}>Take screenshot</button>
-        </div> */}
-        {/* <img width={300} src={image} alt={"Screenshot"} /> */}
-        {/* <div ref={ref}>
-          <h1>use-react-screenshot</h1>
-          <p>
-            <strong>hook by @vre2h which allows to create screenshots</strong>
-          </p>
-        </div> */}
-      </div>
+          <div className="photomaton">
+            <div className="photoArea" ref={ref}>
+              {photo && (
+                <img
+                  className="photoUser"
+                  src={photoSave}
+                  alt="photo-capturer"
+                />
+              )}
+              {chooseCut && (
+                <img className={chooseCut.className} src={chooseCut.image} />
+              )}
+            </div>
+            {openMenu === false ? (
+              <button className="buttonMenu" onClick={handleMenu}>{`<`}</button>
+            ) : (
+              <MenuBurger
+                setChooseCut={setChooseCut}
+                openMenu={openMenu}
+                setOpenMenu={setOpenMenu}
+              />
+            )}
+            <button
+              className="buttonPhotomaton valider"
+              onClick={handleNavigate}
+            >
+              {`Valider >`}
+            </button>
+          </div>
+        </>
+      )}
     </>
   );
 };

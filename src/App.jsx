@@ -6,6 +6,7 @@ import { useScreenshot } from "use-react-screenshot";
 function App() {
   const [photo, setPhoto] = useState("");
   const [screenshot, setScreenshot] = useScreenshot();
+  const [backToCamera, setBackToCamera] = useState(true);
 
   const [chooseColor, setChooseColor] = useState("");
 
@@ -20,6 +21,8 @@ function App() {
           setChooseColor,
           screenshot,
           setScreenshot,
+          backToCamera,
+          setBackToCamera,
         }}
       />
     </div>

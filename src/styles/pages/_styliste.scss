@@ -26,9 +26,12 @@
             }
             .pin1{
                 position: absolute;
-                top: 110px;
+                top: 100px;
                 left: 85px;
-                font-size: 20px;
+                width: 30px;
+                img{
+                    object-fit: contain;
+                }
             }
             .stylistCard1{
                 position: absolute;
@@ -41,8 +44,11 @@
             .pin2{
                 position: absolute;
                 bottom: 90px;
-                right: 30px;
-                font-size: 20px;
+                right: 40px;
+                width: 30px;
+                img{
+                    object-fit: contain;
+                }
             }
             .closingDiv{
                 display: flex;

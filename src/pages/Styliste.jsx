@@ -72,10 +72,10 @@ const Styliste = () => {
                         </div>
                         <img src='/images/maps1.png'/>
                         <div className='pin1' onClick={handleStylist1}>
-                            <img src=''/>
+                            <img src='/logo/location_4315546.png'/>
                         </div>
                         <div className='pin2' onClick={handleStylist2}>
-                            <img src=''/>
+                            <img src='/logo/location_4315546.png'/>
                         </div>
                         {stylist1 &&
                             <div className='stylistCard1'>

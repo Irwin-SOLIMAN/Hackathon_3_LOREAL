@@ -43,10 +43,10 @@ const reco = [
     },
     {
         id: 7,
-        name : "ELSEVE COLOR-VIVE SHAMPOING VIOLET DÉJAUNISSEUR",
-        price: "4.14€",
-        categ: "soin",
-        img: "/images/hairProducts/soin_cheveux1.png",
+        name : "EXCELLENCE CRÈME REFLETS",
+        price: "11.50€",
+        categ: "red",
+        img: "/images/hairProducts/teinture_roux3.png",
     },
     {
         id: 8,
@@ -71,10 +71,11 @@ const reco = [
     },
     {
         id: 11,
-        name : "MASQUE VIOLET DÉMÊLANT DÉJAUNISSEUR",
-        price: "6.19€",
-        categ: "soin",
-        img: "/images/hairProducts/soin_cheveux2.png",
+        name : "PRÉFÉRENCE REFLETS",
+        price: "11.90€",
+        categ: "red",
+        img: "/images/hairProducts/teinture_roux2.png",
+        
     },
     {
         id: 12,
@@ -85,17 +86,17 @@ const reco = [
     },
     {
         id: 13,
-        name : "PRÉFÉRENCE REFLETS",
-        price: "11.90€",
-        categ: "red",
-        img: "/images/hairProducts/teinture_roux2.png",
+        name : "MASQUE VIOLET DÉMÊLANT DÉJAUNISSEUR",
+        price: "6.19€",
+        categ: "soin",
+        img: "/images/hairProducts/soin_cheveux2.png",
     },
     {
         id: 14,
-        name : "EXCELLENCE CRÈME REFLETS",
-        price: "11.50€",
-        categ: "red",
-        img: "/images/hairProducts/teinture_roux3.png",
+        name : "ELSEVE COLOR-VIVE SHAMPOING VIOLET DÉJAUNISSEUR",
+        price: "4.14€",
+        categ: "soin",
+        img: "/images/hairProducts/soin_cheveux1.png",
     },
     {
         id: 15,

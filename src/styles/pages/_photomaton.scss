@@ -1,60 +1,69 @@
-.photomaton{
+.photomaton {
+  //   display: flex;
+  //   flex-direction: column;
+  //   width: 100vw;
+  //   height: 92vh;
+  //   overflow-y: hidden;
+  //   position: relative;
+
+  .buttonMenu {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background-color: rgb(91, 54, 54);
+    color: white;
+    border: none;
+    border-radius: 10%;
+    padding: 1%;
+  }
+
+  .photoArea {
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 92vh;
+    // height: 92vh;
     overflow-y: hidden;
+    position: relative;
 
-    .photoUser{
-        width: 100%;
+    .photoUser {
+      width: 100%;
     }
-    .haircut{
-        position: absolute;
-        left: -15%;
-        top: 20%;
-    }
+    // .haircut {
+    //   position: absolute;
+    //   left: -15%;
+    //   top: 20%;
+    // }
 
-    .buttonMenu{
-        position: fixed;
-        top: 50%;
-        right: 0;
-        background-color: rgb(91, 54, 54);
-        color: white;
-        border: none;
-        border-radius: 10%;
-        padding: 1%;
+    .hairF1 {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
     }
+    .hairF2 {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+    .hairF3 {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+    .hairF4 {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+    .hairF5 {
+      position: absolute;
+      width: 100%;
+    }
+    .hairF6 {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+  }
 
-    //positions des haircuts
-
-    .hairF1{
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-    }
-    .hairF2{
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-    }
-    .hairF3{
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-    }
-    .hairF4{
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-    }
-    .hairF5{
-        position: absolute;
-        width: 100%;
-    }
-    .hairF6{
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-    }
-   
+  //positions des haircuts
 }

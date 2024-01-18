@@ -30,7 +30,9 @@ const Home = () => {
           onRequestClose={() => setIsCameraOpen(false)}
           className={"modal"}
         >
-          <div className="cercle"></div>
+          <p>{`Merci de vous positionner afin que votre visage soit bien compris dans l'intégralité du cercle.`}</p>
+          <img className="cercle" src="/images/positionFace.png" alt=""/>
+          {/* <div className="cercle"></div> */}
           <Camera />
         </Modal>
       </div>

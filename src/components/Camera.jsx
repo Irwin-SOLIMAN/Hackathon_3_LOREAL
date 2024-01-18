@@ -37,6 +37,8 @@ function Camera() {
         width={"100%"}
         videoConstraints={videoConstraints}
         screenshotQuality={1}
+        mirrored={true}
+        imageSmoothing={false}
       />
       <button
         onClick={capture}

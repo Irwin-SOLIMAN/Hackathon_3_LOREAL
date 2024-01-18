@@ -60,10 +60,16 @@ function RdvDate() {
           confirmation.
         </h2>
         <button onClick={() => setModalIsOpen(false)}>
-          <NavLink to={"/"}>
-            Fermer
+          <NavLink to={"/styliste"}>
+            {`Retour vers la boutique`}
           </NavLink>
         </button>
+        <button onClick={() => setModalIsOpen(false)}>
+          <NavLink to={"/"}>
+            {`Fermer l'application`}
+          </NavLink>
+        </button>
+    
       </Modal>
     </div>
   );

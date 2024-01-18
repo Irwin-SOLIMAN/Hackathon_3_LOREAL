@@ -5,8 +5,11 @@
 @import "./pages/styliste";
 @import "./pages/home";
 @import "./pages/rdv";
-
-@import "./pages/login"; //import des styles de composants ici
+@import "./pages/achats";
+@import "./pages/login"; 
 //import des styles de composants ici
 @import "./components/header";
 @import "./components/menuBurger";
+@import "./components/camera";
+@import "./components/basket";
+@import "./components/buy";

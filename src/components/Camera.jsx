@@ -44,7 +44,7 @@ function Camera() {
         style={{
           position: "absolute",
           bottom: 15,
-          left: "62%",
+          left: "58%",
           transform: "translateX(-70%)",
           zIndex: 100,
           backgroundColor: "black",

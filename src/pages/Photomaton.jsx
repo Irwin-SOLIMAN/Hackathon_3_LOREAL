@@ -38,42 +38,28 @@ const Photomaton = () => {
   }
 
   return (
-    <>
-      <div className="photomaton">
-        <div className="photoArea" ref={ref}>
-          {photo && (
-            <img className="photoUser" src={photoSave} alt="photo-capturer" />
-          )}
-          {chooseCut && (
-            <img className={chooseCut.className} src={chooseCut.image} />
-          )}
-        </div>
-        {openMenu === false ? (
-          <button className="buttonMenu" onClick={handleMenu}>{`<`}</button>
-        ) : (
-          <MenuBurger
-            setChooseCut={setChooseCut}
-            openMenu={openMenu}
-            setOpenMenu={setOpenMenu}
-          />
+    <div className="photomaton">
+      <div className="photoArea" ref={ref}>
+        {photo && (
+          <img className="photoUser" src={photoSave} alt="photo-capturer" />
+        )}
+        {chooseCut && (
+          <img className={chooseCut.className} src={chooseCut.image} />
         )}
       </div>
+      {openMenu === false ? (
+        <button className="buttonMenu" onClick={handleMenu}>{`<`}</button>
+      ) : (
+        <MenuBurger
+          setChooseCut={setChooseCut}
+          openMenu={openMenu}
+          setOpenMenu={setOpenMenu}
+        />
+      )}
       <button className="buttonPhotomaton" onClick={handleNavigate}>
         Valider
       </button>
-      <div>
-        {/* <div>
-          <button style={{ marginBottom: "10px" }}>Take screenshot</button>
-        </div> */}
-        {/* <img width={300} src={image} alt={"Screenshot"} /> */}
-        {/* <div ref={ref}>
-          <h1>use-react-screenshot</h1>
-          <p>
-            <strong>hook by @vre2h which allows to create screenshots</strong>
-          </p>
-        </div> */}
-      </div>
-    </>
+    </div>
   );
 };
 

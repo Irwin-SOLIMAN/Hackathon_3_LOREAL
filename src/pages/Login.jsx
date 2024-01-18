@@ -17,7 +17,7 @@ const Login = () => {
         <div className="leftLine"></div>
         <div className="logo">
           {" "}
-          <img src="public/images/login.png" alt="logo login" />
+          <img src="/images/login.png" alt="logo login" />
         </div>
         <div className="rightLine"></div>
       </div>
@@ -39,8 +39,8 @@ const Login = () => {
               onClick={() => setPasswordShow(!passwordShow)}
               src={
                 passwordShow
-                  ? "public/images/Mdp_unsee_black.png"
-                  : "public/images/Mdp_see_black.png"
+                  ? "/images/Mdp_unsee_black.png"
+                  : "/images/Mdp_see_black.png"
               }
               alt="password visible"
             />
@@ -53,7 +53,7 @@ const Login = () => {
         <div className="registerText">
           Je n'ai pas de compte,{" "}
           <span className="register" onClick={() => setsignInShow(!signInShow)}>
-            s'inscrire
+            S'inscrire
           </span>{" "}
         </div>
         {signInShow && (

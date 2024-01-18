@@ -7,6 +7,7 @@ import Login from "./pages/Login.jsx";
 import Photomaton from "./pages/Photomaton.jsx";
 import Styliste from "./pages/Styliste.jsx";
 import Rdv from "./pages/Rdv.jsx";
+import Achat from "./pages/Achat.jsx";
 import "./styles/index.scss";
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/rdv",
         element: <Rdv/>
+      },
+      {
+        path: "/achatsclient",
+        element: <Achat/>
       },
     ],
   },

@@ -60,6 +60,7 @@ function Camera() {
       >
         Prend ta photo
       </button>
+      <img className="cercle" src="/images/positionFace.png" alt=""/>
     </div>
   );
 }

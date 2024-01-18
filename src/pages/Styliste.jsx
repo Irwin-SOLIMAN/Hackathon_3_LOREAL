@@ -2,19 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useOutletContext, NavLink } from "react-router-dom";
 import reco from "../recoDB";
 import { useScreenshot } from "use-react-screenshot";
+import Basket from "../components/Basket";
 
 const Styliste = () => {
   //   const [chooseColor, setChooseColor] = useOutletContext();
   //   const [screenshot, setScreenshot] = useOutletContext();
-  const { chooseColor, screenshot } = useOutletContext();
+  const { chooseColor, screenshot, selectedProductBasket, setSelectedProductBasket} = useOutletContext();
   const [stylistMap, setStylistMap] = useState(false);
   const [cityValue, setCityValue] = useState("");
   const [stylist1, setStylist1] = useState(false);
   const [stylist2, setStylist2] = useState(false);
-
-  useEffect(() => {
-    console.log(chooseColor);
-  }, []);
+  const [basket, setBasket] = useState(false);
 
   const handleInputChange = (event) => {
     const city = event.target.value.toLowerCase();
@@ -24,6 +22,11 @@ const Styliste = () => {
       setStylistMap(false);
     }
     setCityValue(city);
+  };
+
+  const handleBasket = (product) => {
+    setBasket(true);
+    setSelectedProductBasket(product)
   };
 
   const handleClose = () => {
@@ -81,6 +84,7 @@ const Styliste = () => {
           ></input>
           {stylistMap && (
             <div className="map">
+          
               <div className="closingDiv" onClick={handleClose}>
                 <p>Fermer la carte</p>
                 <div className="closingButton">✖️</div>
@@ -132,11 +136,13 @@ const Styliste = () => {
         >
           <p>Je consulte les produits recommandés</p>
           <div className="productsMap">
+          {basket && <Basket setBasket={setBasket} selectedProductBasket={selectedProductBasket}/>}
             {recoFilteredByColor.map((product) => {
               return (
                 <div className="productCard" key={product.id}>
                   <div className="imgContainer">
                     <img src={product.img} />
+                    <button className="plus" onClick={()=>handleBasket(product)}>➕</button>
                   </div>
                   <div className="productInfo">
                     <div className="productName">

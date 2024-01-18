@@ -1,0 +1,53 @@
+.basketContainer {
+  height: 40vh;
+  width: 80vw;
+  border-radius: 10px;
+  z-index: 900;
+  color: black;
+  background-color: rgb(91, 54, 54, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  h1 {
+    font-size: 1.2rem;
+  }
+  .basket {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    img {
+      height: 80%;
+    }
+    input {
+      width: 5vw;
+    }
+    .counter {
+      display: flex;
+      justify-content: space-around;
+      width: 20%;
+      gap: 5vw;
+
+      button {
+        background-color: #f7ece8;
+        border: none;
+        border-radius: 50%;
+        padding: 1%;
+      }
+    }
+  }
+  .validateContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+
+    .validate {
+      background-color: #f7ece8;
+      border: none;
+      padding: 1%;
+    }
+  }
+}

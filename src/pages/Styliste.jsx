@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useOutletContext } from "react-router-dom";
+import { useOutletContext, NavLink } from "react-router-dom";
 import reco from "../recoDB";
 import { useScreenshot } from "use-react-screenshot";
 
@@ -60,6 +60,12 @@ const Styliste = () => {
 
   return (
     <div className="styliste">
+      <div className="backButton">
+        <NavLink to={"/photomaton"}>
+          <img src="/logo/next.png" />
+          Retour
+        </NavLink>
+      </div>
       <div>
         <img
           width={150}
@@ -67,86 +73,95 @@ const Styliste = () => {
           src={screenshot}
           alt={"Screenshot"}
         />
-      </div>
-      <div className="finderBlock">
-        <p>Je trouve un styliste L'ORÉAL</p>
-        <input
-          type="text"
-          placeholder="📍 Votre ville"
-          onChange={handleInputChange}
-          value={cityValue}
-        ></input>
-        {stylistMap && (
-          <div className="map">
-            <div className="closingDiv" onClick={handleClose}>
-              <p>Fermer la carte</p>
-              <div className="closingButton">✖️</div>
-            </div>
-            <img src="/images/maps1.png" />
-            <div className="pin1" onClick={handleStylist1}>
-              <img src="/logo/location_4315546.png" />
-            </div>
-            <div className="pin2" onClick={handleStylist2}>
-              <img src="/logo/location_4315546.png" />
-            </div>
-            {stylist1 && (
-              <div className="stylistCard1">
-                <div className="closingButton" onClick={closeCard1}>
-                  ✖️
-                </div>
-                <div className="infos">
-                  <div className="salon">Innovatif</div>
-                  <div className="adress">4 Boulevard Dupont</div>
-                  <div className="contact">02.54.98.20.21</div>
-                </div>
+
+        <div className="finderBlock">
+          <p>Je trouve un styliste L'ORÉAL</p>
+          <input
+            type="text"
+            placeholder="📍 Votre ville"
+            onChange={handleInputChange}
+            value={cityValue}
+          ></input>
+          {stylistMap && (
+            <div className="map">
+              <div className="closingDiv" onClick={handleClose}>
+                <p>Fermer la carte</p>
+                <div className="closingButton">✖️</div>
               </div>
-            )}
-            {stylist2 && (
-              <div className="stylistCard2">
-                <div className="closingButton" onClick={closeCard2}>
-                  ✖️
-                </div>
-                <div className="infos">
-                  <div className="salon">Coupe de Cœur</div>
-                  <div className="adress">35 Rue du Calvaire</div>
-                  <div className="contact">02.65.34.75.40</div>
-                </div>
+              <img src="/images/maps1.png" />
+              <div className="pin1" onClick={handleStylist1}>
+                <img src="/logo/location_4315546.png" />
               </div>
-            )}
-          </div>
-        )}
-      </div>
-      <div
-        className={
-          stylistMap === true ? "recommendedBlockHidden" : "recommendedBlock"
-        }
-      >
-        <p>Je consulte les produits recommandés</p>
-        <div className="productsMap">
-          {recoFilteredByColor.map((product) => {
-            return (
-              <div className="productCard" key={product.id}>
-                <div className="imgContainer">
-                  <img src={product.img} />
-                </div>
-                <div className="productInfo">
-                  <div className="productName">
-                    {product.name.toUpperCase()}
+              <div className="pin2" onClick={handleStylist2}>
+                <img src="/logo/location_4315546.png" />
+              </div>
+              {stylist1 && (
+                <div className="stylistCard1">
+                  <div className="closingButton" onClick={closeCard1}>
+                    <button type="button">✖️</button>
                   </div>
-                  <div className="productPrice">{product.price} </div>
+                  <div className="infos">
+                    <div className="salon">Innovatif</div>
+                    <div className="adress">4 Boulevard Dupont, Nantes</div>
+                    <div className="contact">02.40.98.20.21</div>
+                    <NavLink to={"/login"}>
+                      <button className="button-rdv">Prendre RDV</button>
+                    </NavLink>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              )}
+              {stylist2 && (
+                <div className="stylistCard2">
+                  <div className="closingButton" onClick={closeCard2}>
+                    <button type="button">✖️</button>
+                  </div>
+                  <div className="infos">
+                    <div className="salon">Coupe de Cœur</div>
+                    <div className="adress">35 Rue du Calvaire, Nantes</div>
+                    <div className="contact">02.40.34.75.40</div>
+                    <NavLink to={"/login"}>
+                      <button className="button-rdv">Prendre RDV</button>
+                    </NavLink>
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
         <div
-          className={stylistMap === true ? "unrollArrow" : "unrollArrowHidden"}
-          onClick={handleClose}
+          className={
+            stylistMap === true ? "recommendedBlockHidden" : "recommendedBlock"
+          }
         >
-          ⬇️
+          <p>Je consulte les produits recommandés</p>
+          <div className="productsMap">
+            {recoFilteredByColor.map((product) => {
+              return (
+                <div className="productCard" key={product.id}>
+                  <div className="imgContainer">
+                    <img src={product.img} />
+                  </div>
+                  <div className="productInfo">
+                    <div className="productName">
+                      {product.name.toUpperCase()}
+                    </div>
+                    <div className="productPrice">{product.price} </div>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+          <div
+            className={
+              stylistMap === true ? "unrollArrow" : "unrollArrowHidden"
+            }
+            onClick={handleClose}
+          >
+            <img src="/logo/next.png" />
+          </div>
         </div>
+        <div />
       </div>
-      <div />
     </div>
   );
 };

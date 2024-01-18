@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
 
-
   .photo-accueil {
     display: flex;
     flex-direction: column;
@@ -47,28 +46,29 @@
         height: 20px;
       }
     }
-  } 
+  }
 }
 
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vh;
-    height: 100vh;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #080808c0;
-    backdrop-filter: blur(2px);
-    .cercle {
-      width: 170px;
-      height: 170px;
-      border: 2px solid black;
-      border-radius: 100px;
-      z-index: 200;
-      position: absolute;
-      margin-right: 80px;
-    }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vh;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #080808c0;
+  backdrop-filter: blur(2px);
+  .cercle {
+    width: 280px;
+    height: 280px;
+    border: 2px dotted white;
+    border-radius: 100%;
+    z-index: 200;
+    position: absolute;
+    top: 20%;
+    left: 6%;
   }
+}

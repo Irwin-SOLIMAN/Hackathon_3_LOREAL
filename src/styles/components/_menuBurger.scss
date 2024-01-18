@@ -25,18 +25,27 @@
 
     .chooseCut,
     .chooseColor {
-      height: 40%;
+      min-height: 40%;
       width: 100%;
       background-color: white;
       border-radius: 10px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-around;
 
       .switch {
         transform: rotate(90deg);
         cursor: pointer;
+      }
+
+      .colorHair {
+        width: 50%;
+        border-radius: 50%;
+      }
+
+      .cutHair{
+        width: 60%;
       }
     }
   }
@@ -49,6 +58,7 @@
     width: 90%;
     cursor: pointer;
     padding: 5%;
+
   }
   .buttonClose {
     position: fixed;
@@ -59,14 +69,16 @@
     border: none;
     border-radius: 10%;
     padding: 1%;
+
+  
   }
 }
 
 @keyframes slideIn {
-    0% {
-      transform: translate(0);
-    }
-    100% {
-      transform: translate(100%);
-    }
+  0% {
+    transform: translate(0);
   }
+  100% {
+    transform: translate(100%);
+  }
+}

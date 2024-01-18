@@ -2,7 +2,17 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 92vh;
+    overflow-y: hidden;
+
+    .photoUser{
+        width: 100%;
+    }
+    .haircut{
+        position: absolute;
+        left: -15%;
+        top: 20%;
+    }
 
     .buttonMenu{
         position: fixed;
@@ -14,4 +24,32 @@
         border-radius: 10%;
         padding: 1%;
     }
+
+    //positions des haircuts
+
+    .hairF1{
+        position: absolute;
+        width: 100%;
+    }
+    .hairF2{
+        position: absolute;
+        width: 100%;
+    }
+    .hairF3{
+        position: absolute;
+        width: 100%;
+    }
+    .hairF4{
+        position: absolute;
+        width: 100%;
+    }
+    .hairF5{
+        position: absolute;
+        width: 100%;
+    }
+    .hairF6{
+        position: absolute;
+        width: 100%;
+    }
+   
 }

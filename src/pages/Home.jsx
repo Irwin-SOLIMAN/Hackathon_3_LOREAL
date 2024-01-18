@@ -1,6 +1,6 @@
 import Modal from "react-modal";
 import Camera from "../components/Camera";
-import React, { useRef, useState } from "react";
+import { useState } from "react";
 
 Modal.setAppElement("#root");
 

@@ -10,10 +10,8 @@ const videoConstraints = {
 };
 
 function Camera() {
-
-  const navigate= useNavigate()
-  // eslint-disable-next-line no-unused-vars
-  const[photo, setphoto] = useOutletContext();
+  const navigate = useNavigate();
+  const [photo, setphoto] = useOutletContext();
 
   const webcamRef = React.useRef(null);
 
@@ -24,7 +22,14 @@ function Camera() {
   }, [navigate, setphoto]);
 
   return (
-    <div style={{ position: "relative", width: 500, height: 720 }}>
+    <div
+      style={{
+        position: "relative",
+        width: 365,
+        // height: ,
+        // transform: "translate(40px, 40px)",
+      }}
+    >
       <Webcam
         audio={false}
         height={"100%"}
@@ -38,8 +43,8 @@ function Camera() {
         onClick={capture}
         style={{
           position: "absolute",
-          bottom: 100,
-          left: "45%",
+          bottom: 15,
+          left: "62%",
           transform: "translateX(-70%)",
           zIndex: 100,
           backgroundColor: "black",
@@ -54,7 +59,6 @@ function Camera() {
       >
         Prend ta photo
       </button>
-
     </div>
   );
 }

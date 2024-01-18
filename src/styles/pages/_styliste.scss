@@ -6,6 +6,27 @@
   align-items: center;
   gap: 20px;
   overflow-y: hidden;
+  .backButton {
+    display: flex;
+    width: 100%;
+    a {
+      padding-left: 10px;
+      display: flex;
+      height: 20px;
+      color: black;
+      justify-content: flex-start;
+      text-decoration: none;
+      border: none;
+      background-color: none;
+      font-family: "TradeGothicLTStdBold", sans-serif;
+      img {
+        transform: scaleX(-1);
+        width: 30px;
+        object-fit: contain;
+      }
+    }
+  }
+
   .finderBlock {
     display: flex;
     flex-direction: column;
@@ -34,12 +55,77 @@
         }
       }
       .stylistCard1 {
+        display: flex;
+        flex-direction: column;
         position: absolute;
-        background-color: #fefefe;
+        background-color: #ffffffe0;
+        border-radius: 10px;
+        padding: 10px;
+        font-family: "TradeGothicLTStdBold", sans-serif;
+        .infos{
+        display: flex;
+        flex-direction: column;
+          a{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            .button-rdv {
+              width: 100px;
+              height: 30px;
+              margin-top: 10px;
+              border: solid 1px black;
+              border-radius: 4px;
+              background-color: #fefefe;
+              font-family: "TradeGothicLTStdBold", sans-serif;
+              font-size: 15px;
+            }
+          }
+        }
+        .closingButton{
+          display: flex;
+          width: 100%;
+          justify-content: end;
+          button{
+            border: none;
+            background: none;
+          }
+        }
+        
       }
       .stylistCard2 {
         position: absolute;
         background-color: #fefefe;
+        border-radius: 10px;
+        font-family: "TradeGothicLTStdBold", sans-serif;
+        padding: 10px;
+        .closingButton{
+          display: flex;
+          width: 100%;
+          justify-content: end;
+          button{
+            border: none;
+            background: none;
+          }
+        }
+        .infos{
+          display: flex;
+          flex-direction: column;
+            a{
+              display: flex;
+              width: 100%;
+              justify-content: center;
+              .button-rdv {
+                width: 100px;
+                height: 30px;
+                margin-top: 10px;
+                border: solid 1px black;
+                border-radius: 4px;
+                background-color: #fefefe;
+                font-family: "TradeGothicLTStdBold", sans-serif;
+                font-size: 15px;
+              }
+            }
+          }
       }
       .pin2 {
         position: absolute;
@@ -68,31 +154,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-self: center;
     width: 80%;
-    height: 70%;
+    height: 70vh;
     margin-top: 20px;
     gap: 10px;
-    .productsMap {
+    .productsMap {border-radius: 8px;
+      background: rgb(245, 227, 227);
+      box-shadow: inset 5px 5px 20px #e2e1e1,
+                  inset -10px -10px 20px #fff4ef;
       padding-top: 10px;
-      background-color: #f7ece8;
-      border-radius: 10px;
       display: flex;
       flex-wrap: wrap;
-      height: 100%;
+      height: 80vh;
       width: 100%;
       align-items: center;
       justify-content: center;
       overflow-y: scroll;
       gap: 15px;
-      flex-shrink: 0;
-
       .productCard {
+        flex-shrink: 0;
         display: flex;
         flex-direction: column;
         width: 45%;
-        height: 30%;
-        flex-shrink: 0;
+        min-height: 30%;
         padding-block: 20px;
         .imgContainer {
           display: flex;
@@ -138,7 +222,7 @@
     overflow-y: hidden;
     .productsMap {
       padding-top: 10px;
-      background-color: #f7ece8;
+      background-color: #fefefe;
       display: flex;
       flex-wrap: wrap;
       height: 80vh;
@@ -184,6 +268,13 @@
       display: flex;
       position: absolute;
       bottom: 0;
+
+      img {
+        transform: scaleX(-1);
+        transform: rotate(90deg);
+        width: 30px;
+        object-fit: contain;
+      }
     }
     &:hover {
       cursor: pointer;

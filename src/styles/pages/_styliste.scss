@@ -6,6 +6,27 @@
     align-items: center;
     gap: 20px;
     overflow-y: hidden;
+    .backButton{
+        display: flex;
+        width: 100%;
+        a{
+            padding-left: 10px;
+            display: flex;
+            height: 20px;
+            color: black;
+            justify-content: flex-start;
+            text-decoration: none;
+            border: none;
+            background-color: none;
+            font-family: "TradeGothicLTStdBold", sans-serif;
+            img{
+                transform: scaleX(-1);
+                width: 30px;
+                object-fit: contain;
+            }
+        }
+    }
+    
     .finderBlock{
         display: flex;
         flex-direction: column;
@@ -68,9 +89,8 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-self: center;
         width: 80%;
-        height: 70%;
+        height: 70vh;
         margin-top: 20px;
         gap: 10px;
         .productsMap{
@@ -78,18 +98,19 @@
             background-color: #FEFEFE;
             display: flex;
             flex-wrap: wrap;
-            height: 100%;
+            height: 80vh;
             width: 100%;
             align-items: center;
             justify-content: center;
             overflow-y: scroll;
             gap: 15px;
             .productCard{
+                flex-shrink: 0;
                 display: flex;
                 flex-direction: column;
                 width: 45%;
-                height: 30%;
-                padding-bottom: 10px;
+                min-height: 30%;
+                padding-block: 20px;
                 .imgContainer{
                     display: flex;
                     width: 100%;

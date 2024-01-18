@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useOutletContext } from 'react-router-dom';
+import { NavLink, useOutletContext } from 'react-router-dom';
 import reco from '../recoDB';
 
 
@@ -58,6 +58,12 @@ const Styliste = () => {
 
     return (
         <div className='styliste'>
+            <div className='backButton'>
+                <NavLink to={"/photomaton"}>
+                <img src='/logo/next.png'/>
+                    Retour
+                </NavLink>
+            </div>
             <div className='finderBlock'>
                 <p>
                     Je trouve un styliste L'ORÉAL
@@ -121,7 +127,6 @@ const Styliste = () => {
                     })}
                 </div>
                 <div className={stylistMap === true ? 'unrollArrow' : 'unrollArrowHidden'} onClick={handleClose}>
-                    ⬇️
                 </div>
             </div>
             <div/>

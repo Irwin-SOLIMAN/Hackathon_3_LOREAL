@@ -15,15 +15,22 @@
   .buttonMenu {
     position: fixed;
     left: 47%;
-    bottom: -1%;
+    bottom: 0%;
     background-color: rgb(91, 54, 54);
     color: white;
     border: none;
     border-radius: 10%;
-    padding: 4%;
+    padding: 2%;
     z-index: 5;
     transform: rotate(90deg);
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    img {
+      transform: rotate(180deg);
+      width: 30px;
+      object-fit: contain;
+    }
   }
 
   .buttonPhotomaton {

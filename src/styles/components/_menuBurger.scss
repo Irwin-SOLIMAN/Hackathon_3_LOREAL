@@ -1,6 +1,6 @@
 .menuBurger {
-  width: 30vw;
-  height: 100vh;
+  width: 100vw;
+  height: 30vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,9 +9,8 @@
   font-size: 1.5rem;
   padding: 3%;
   position: fixed;
-  top: 0;
-  right: 0;
-  padding-top: 10%;
+  bottom: 0;
+  left: 0;
   animation: slideIn;
   animation-duration: 2sec;
   transition: all ease;
@@ -20,33 +19,31 @@
   .selectionsHair {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     height: 100%;
     width: 100%;
     gap: 2%;
 
     .chooseCut,
     .chooseColor {
-      min-height: 40%;
       width: 100%;
+      height: 50%;
       background-color: white;
       border-radius: 10px;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      justify-content: space-around;
-
-      .switch {
-        transform: rotate(90deg);
-        cursor: pointer;
-      }
+      justify-content: center;
+      gap: 1%;
+      overflow-x: auto;
 
       .colorHair {
-        width: 50%;
+        width: 20%;
         border-radius: 50%;
       }
 
-      .cutHair{
-        width: 60%;
+      .cutHair {
+        width: 15%;
       }
     }
   }
@@ -56,22 +53,21 @@
     background-color: black;
     color: white;
     border: none;
-    width: 90%;
+    width: 30%;
     cursor: pointer;
-    padding: 5%;
-
+    padding: 2%;
   }
   .buttonClose {
+    transform: rotate(90deg);
     position: fixed;
-    top: 50%;
-    right: 30%;
+    bottom: 29%;
+    left: 50%;
     background-color: rgb(91, 54, 54);
     color: white;
     border: none;
     border-radius: 10%;
     padding: 1%;
-
-  
+    cursor: pointer;
   }
 }
 

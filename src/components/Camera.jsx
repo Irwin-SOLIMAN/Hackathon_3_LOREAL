@@ -49,9 +49,9 @@ function Camera() {
       >
         Prend ta photo
       </button>
-      <div>
+      {/* <div>
         <img src={photo} alt="photo-capturer"/>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -6,6 +6,7 @@ import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
 import Photomaton from "./pages/Photomaton.jsx";
 import Styliste from "./pages/Styliste.jsx";
+import Rdv from "./pages/Rdv.jsx";
 import "./styles/index.scss";
 
 const router = createBrowserRouter([
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/styliste",
         element: <Styliste />,
+      },
+      {
+        path: "/rdv",
+        element: <Rdv/>
       },
     ],
   },

@@ -83,7 +83,9 @@ const MenuBurger = ({ openMenu, setOpenMenu, setChooseCut }) => {
             )}
           </div>
 
-          <button className="buttonClose" onClick={handleClose}>{`<`}</button>
+          <button className="buttonClose" onClick={handleClose}>
+            <img src="/logo/next.png"/>
+          </button>
         </div>
       )}
     </>

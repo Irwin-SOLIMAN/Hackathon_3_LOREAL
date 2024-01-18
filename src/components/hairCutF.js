@@ -4,12 +4,12 @@ const HairCutF =[{
     image: "/images/hairCutF/hairF1.png",
     color:"DarkBlond",
 },
-{
-    id: 2,
-    className: 'hairF2',
-    image: "/images/hairCutF/hairF2.png",
-    color:"DarkBlond",
-},
+// {
+//     id: 2,
+//     className: 'hairF2',
+//     image: "/images/hairCutF/hairF2.png",
+//     color:"DarkBlond",
+// },
 {
     id:3,
     className: 'hairF3',

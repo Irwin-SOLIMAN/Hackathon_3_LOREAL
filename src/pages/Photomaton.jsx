@@ -69,7 +69,9 @@ const Photomaton = () => {
               )}
             </div>
             {openMenu === false ? (
-              <button className="buttonMenu" onClick={handleMenu}>{`<`}</button>
+              <button className="buttonMenu" onClick={handleMenu}>
+                <img src="/logo/next.png"/>
+              </button>
             ) : (
               <MenuBurger
                 setChooseCut={setChooseCut}

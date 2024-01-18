@@ -29,17 +29,6 @@
     }
   }
 
-  .imageContainer {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    transform: translate(30px, -50px);
-    z-index: 20;
-    img {
-      width: 90px;
-    }
-  }
-
   .imageContainerHidden {
     display: none;
   }

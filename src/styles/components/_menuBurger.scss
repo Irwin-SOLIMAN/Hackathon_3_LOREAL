@@ -58,16 +58,20 @@
     padding: 2%;
   }
   .buttonClose {
-    transform: rotate(90deg);
     position: fixed;
-    bottom: 29%;
-    left: 50%;
+    bottom: 28.5%;
+    left: 45.5%;
     background-color: rgb(91, 54, 54);
     color: white;
     border: none;
     border-radius: 10%;
-    padding: 1%;
+    padding-inline: 2%;
     cursor: pointer;
+    img {
+      transform: rotate(90deg);
+      width: 30px;
+      object-fit: contain;
+    }
   }
 }
 

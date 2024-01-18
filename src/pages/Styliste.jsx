@@ -92,8 +92,9 @@ const Styliste = () => {
                                 <div className='closingButton' onClick={closeCard2}>✖️</div>
                                 <div className='infos'>
                                     <div className='salon'>Coupe de Cœur</div>
-                                    <div className='adress'>35 Rue du Calvaire</div>
-                                    <div className='contact'>02.65.34.75.40</div>
+                                    <div className='adress'>35 Rue du Calvaire, Nantes</div>
+                                    <div className='contact'>02.40.34.75.40</div>
+                                    <button className='button-rdv'>Prendre RDV</button>
                                 </div>
                             </div>
                         }

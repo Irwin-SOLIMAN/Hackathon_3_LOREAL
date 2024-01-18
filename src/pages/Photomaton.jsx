@@ -39,6 +39,8 @@ const Photomaton = () => {
 
   return (
     <>
+      <div>Back</div>
+
       <div className="photomaton">
         <div className="photoArea" ref={ref}>
           {photo && (

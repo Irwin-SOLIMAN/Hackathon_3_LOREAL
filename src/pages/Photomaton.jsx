@@ -1,19 +1,28 @@
 import MenuBurger from "../components/MenuBurger";
 import { useOutletContext } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Photomaton = () => {
   const [photo, setphoto] = useOutletContext();
   const [openMenu, setOpenMenu] = useState(false);
   const [chooseCut, setChooseCut] = useState("");
+  const [photoSave, setPhotoSave] = useState("");
+
+  useEffect(() => {
+    setPhotoSave(photo);
+  }, []);
 
   function handleMenu() {
     setOpenMenu(true);
   }
 
+  console.log(photo);
+
   return (
     <div className="photomaton">
-      {photo && <img className="photoUser" src={photo} alt="photo-capturer" />}
+      {photo && (
+        <img className="photoUser" src={photoSave} alt="photo-capturer" />
+      )}
       {chooseCut && (
         <img className={chooseCut.className} src={chooseCut.image} />
       )}

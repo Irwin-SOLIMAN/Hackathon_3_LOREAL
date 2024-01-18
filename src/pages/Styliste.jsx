@@ -66,11 +66,6 @@ const Styliste = () => {
         </NavLink>
       </div>
       <div>
-        <div className="imageContainer">
-          {" "}
-          <img src={screenshot} alt={"Screenshot"} />
-        </div>
-
         <div className="finderBlock">
           <p>Je trouve un styliste L'ORÉAL</p>
           <input

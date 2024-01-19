@@ -8,6 +8,35 @@
     text-align: center;
     padding: 5%;
 
+    .pictures{
+      display: flex;
+      flex-direction: column;
+      width: 100vw;
+      align-items: center;
+      gap: 20px;
+      .pictures1{
+        display: flex;
+        gap: 20px;
+        img{
+          object-fit: contain;
+          width: 120px;
+        }
+      }
+      .pictures2{
+        display: flex;
+        gap: 20px;
+        img{
+          object-fit: contain;
+          width: 120px;
+        }
+      }
+    }
+
+    p{
+      font-size: 20px;
+      padding-top: -20px;
+    }
+
     .buttonPhotomaton {
         border-radius: 10px;
         background-color: black;
